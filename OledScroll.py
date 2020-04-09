@@ -93,6 +93,7 @@ def main(argv):
 
     while True:
         d.display_init("Test")
+        l.scroll_message("Il était une fois tout petit chaton. Il était si petit et si fragile. Un jour...")
 
 if __name__ == '__main__':
     try:
