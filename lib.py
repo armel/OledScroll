@@ -38,7 +38,7 @@ def usage():
     print '88 & 73 from F4HWN Armel'
 
 
-def scroll_message(status, font=None, speed=0.1):
+def scroll_message(status, font=None, speed=10):
     full_text = status
     x = s.device.width
 
