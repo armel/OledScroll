@@ -49,7 +49,7 @@ def scroll_message(status, speed=4):
 
     virtual = viewport(s.device, width=max(s.device.width, w + x + x), height=max(h, s.device.height))
     with canvas(virtual) as draw:
-        draw.text((x, 0), full_text, font=font, fill="white")
+        draw.text((x, 20), full_text, font=font, fill="white")
 
     i = 0
     while i < x + w:
