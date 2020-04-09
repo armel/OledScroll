@@ -10,6 +10,10 @@ import requests
 import sys
 import getopt
 import settings as s
+from luma.core.render import canvas
+from luma.core import legacy
+
+from PIL import ImageFont
 
 # Usage
 def usage():
