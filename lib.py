@@ -52,4 +52,4 @@ def scroll_message(status, font=None, speed=1):
     while i < x + w:
         virtual.set_position((i, 0))
         i += speed
-        time.sleep(0.025)
+        time.sleep(0.0025)
