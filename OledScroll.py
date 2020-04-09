@@ -27,7 +27,7 @@ def main(argv):
 
     # Check and get arguments
     try:
-        options, remainder = getopt.getopt(argv, '', ['help', 'interface=', 'i2c-port=', 'i2c-address=', 'display=', 'display-width=', 'display-height=', 'display-theme=', 'follow=', 'refresh=', 'latitude=', 'longitude='])
+        options, remainder = getopt.getopt(argv, '', ['help', 'interface=', 'i2c-port=', 'i2c-address=', 'display=', 'display-width=', 'display-height='])
     except getopt.GetoptError:
         l.usage()
         sys.exit(2)
@@ -53,26 +53,7 @@ def main(argv):
             s.display_width = int(arg)
         elif opt in ('--display-height'):
             s.display_height = int(arg)
-        elif opt in ('--follow'):
-            if arg in ['RRF', 'TECHNIQUE', 'INTERNATIONAL', 'LOCAL', 'BAVARDAGE', 'FON']:
-                s.room_current = arg
-            else:
-                s.room_current = 'RRF'
-                tmp = l.scan(arg)
-                if tmp is False:
-                    s.room_current = 'RRF'
-                else:
-                    s.room_current = tmp
-                    s.callsign = arg
-                    s.scan = True
-        elif opt in ('--refresh'):
-            s.refresh = float(arg)
-        elif opt in ('--latitude'):
-            s.latitude = float(arg)
-        elif opt in ('--longitude'):
-            s.longitude = float(arg)
-        elif opt in ('--display-theme'):
-            s.display_theme = arg
+    
 
     # Set serial
     if s.interface == 'i2c':
@@ -92,7 +73,6 @@ def main(argv):
 
 
     while True:
-        d.display_init("Test")
         l.scroll_message("Il etait une fois tout petit chaton. Il etait si petit et si fragile. Un jour...")
 
 if __name__ == '__main__':

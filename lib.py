@@ -17,6 +17,8 @@ from luma.core.virtual import viewport
 
 from PIL import ImageFont
 
+font = ImageFont.truetype('./fonts/7x5.ttf', 8)           # Text font
+
 # Usage
 def usage():
     print 'Usage: RRFDisplay.py [options ...]'
@@ -42,7 +44,7 @@ def scroll_message(status, font=None, speed=1):
 
     # First measure the text size
     with canvas(s.device) as draw:
-        w, h = draw.textsize(full_text, font)
+        w, h = draw.textsize(full_text, font = font)
 
     virtual = viewport(s.device, width=max(s.device.width, w + x + x), height=max(h, s.device.height))
     with canvas(virtual) as draw:
@@ -52,4 +54,4 @@ def scroll_message(status, font=None, speed=1):
     while i < x + w:
         virtual.set_position((i, 0))
         i += speed
-        time.sleep(0.0025)
+        time.sleep(0.00025)
