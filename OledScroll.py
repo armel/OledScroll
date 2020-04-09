@@ -91,7 +91,8 @@ def main(argv):
             s.device = st7735(serial, width=s.display_width, height=s.display_height, rotate=3, mode='RGB')
 
 
-    d.display_init("Test")
+    while True:
+        d.display_init("Test")
 
 if __name__ == '__main__':
     try:
