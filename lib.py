@@ -17,7 +17,8 @@ from luma.core.virtual import viewport
 
 from PIL import ImageFont
 
-font = ImageFont.truetype('./fonts/7x5.ttf', 8)           # Text font
+#font = ImageFont.truetype('./fonts/7x5.ttf', 8)           # Text font
+font = ImageFont.truetype('./fonts/rounded_led_board.ttf', 20)
 
 # Usage
 def usage():
@@ -38,13 +39,13 @@ def usage():
     print '88 & 73 from F4HWN Armel'
 
 
-def scroll_message(status, font=None, speed=8):
+def scroll_message(status, font=None, speed=4):
     full_text = status
     x = s.device.width
 
     # First measure the text size
     with canvas(s.device) as draw:
-        w, h = draw.textsize(full_text, font = font)
+        w, h = draw.textsize(full_text, font=font)
 
     virtual = viewport(s.device, width=max(s.device.width, w + x + x), height=max(h, s.device.height))
     with canvas(virtual) as draw:
