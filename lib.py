@@ -9,6 +9,7 @@ import os
 import requests
 import sys
 import getopt
+import time
 import settings as s
 from luma.core.render import canvas
 from luma.core import legacy
