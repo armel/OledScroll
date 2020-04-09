@@ -90,29 +90,6 @@ def main(argv):
         elif s.display == 'st7735':
             s.device = st7735(serial, width=s.display_width, height=s.display_height, rotate=3, mode='RGB')
 
-    init_message = []
-
-    # Let's go
-    init_message.append('RRFDisplay ' + s.version)
-    init_message.append('')
-    init_message.append('88 et 73 de F4HWN')
-    init_message.append('')
-    d.display_init(init_message)
-
-    # Lecture du fichier de theme
-    init_message.append('Chargement Theme')
-    d.display_init(init_message)
-    s.theme = cp.ConfigParser()
-    s.theme.read('./themes/' + s.display_theme)
-
-    # Lecture initiale de la progation et du cluster
-    init_message.append('Requete Propagation')
-    d.display_init(init_message)
-    l.get_solar()
-
-    init_message.append('Requete Cluster')
-    d.display_init(init_message)
-    l.get_cluster()
 
     init_message.append('Let\'s go')
     d.display_init(init_message)
