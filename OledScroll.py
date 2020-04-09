@@ -91,12 +91,7 @@ def main(argv):
             s.device = st7735(serial, width=s.display_width, height=s.display_height, rotate=3, mode='RGB')
 
 
-    init_message.append('Let\'s go')
-    d.display_init(init_message)
-
-    # Boucle principale
-    s.timestamp_start = time.time()
-
+    d.display_init("Test")
 
 if __name__ == '__main__':
     try:
