@@ -31,8 +31,7 @@ def usage():
 
 
 def scroll_message(status, font=None, speed=1):
-    author = u"@{0}".format(status.author.screen_name)
-    full_text = u"{0}  {1}".format(author, status.text).replace("\n", " ")
+    full_text = status
     x = device.width
 
     # First measure the text size
