@@ -73,7 +73,9 @@ def main(argv):
 
 
     while True:
-        l.scroll_message("Il etait une fois tout petit chaton. Il etait si petit et si fragile. Un jour...")
+        print 'Start'
+        l.scroll_message("Il etait une fois tout petit chaton.")
+        print 'Stop'
 
 if __name__ == '__main__':
     try:
