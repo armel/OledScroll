@@ -38,7 +38,7 @@ def usage():
     print '88 & 73 from F4HWN Armel'
 
 
-def scroll_message(status, font=None, speed=10):
+def scroll_message(status, font=None, speed=8):
     full_text = status
     x = s.device.width
 
@@ -54,4 +54,4 @@ def scroll_message(status, font=None, speed=10):
     while i < x + w:
         virtual.set_position((i, 0))
         i += speed
-        time.sleep(0.00025)
+        time.sleep(0.1)
