@@ -12,6 +12,7 @@ import getopt
 import settings as s
 from luma.core.render import canvas
 from luma.core import legacy
+from luma.core.virtual import viewport
 
 from PIL import ImageFont
 
