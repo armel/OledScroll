@@ -17,8 +17,8 @@ from luma.core.virtual import viewport
 
 from PIL import ImageFont
 
-#font = ImageFont.truetype('./fonts/7x5.ttf', 8)           # Text font
-font = ImageFont.truetype('./fonts/rounded_led_board.ttf', 20)
+font = ImageFont.truetype('./fonts/7x5.ttf', 8)           # Text font
+#font = ImageFont.truetype('./fonts/rounded_led_board.ttf', 20)
 
 # Usage
 def usage():
